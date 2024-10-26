@@ -103,3 +103,20 @@ Module 3: Getting and Displaying Data
       - to actually execute the instructions in ./migrations/20241026155228_initial
         and create the database we need to run the following command:
              dotnet ef database update
+
+  2. API: Adding Endpoints
+     - https://app.pluralsight.com/ilx/video-courses/fbbac3b2-0e56-464b-92f2-0b877f92f12c/6feac58d-c6dc-40ae-afd9-6358f0bf8bc1/923360fc-0172-4fda-9038-459c1f4e7db4
+
+     - go to program.cs and add endpoints (see comments)
+        - add the database context to the dependency injection ontainer
+
+        - now we can proceed changing the endpoints in program.cs
+
+        - when you run the API now, it will error out complaining that 
+          the HouseDbContext needs a constructor. Let's add a constructor
+
+        - do a dotnet run --> go to localhost:4000/houses 
+          (affix houses to the URL). You should get a list of houses
+
+
+          

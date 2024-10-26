@@ -7,10 +7,11 @@ using Microsoft.EntityFrameworkCore;
 //https://learn.microsoft.com/en-us/ef/core/cli/dbcontext-creation?tabs=dotnet-core-cli
 public class HouseDbContext: DbContext
  {
-      
-    // public HouseDbContext(DbContextOptions<HouseDbContext> options) : base(options) { 
-
-    // }
+     //This is the special constructor of the HouseDbContext. All you 
+     //have to do is pass it on to base constructor
+     public HouseDbContext(DbContextOptions<HouseDbContext> o) : 
+        base(o) {  
+     }
 
     //Create a property called "Houses" of type DbSet
     //The DBSet collection represents the database table itself.
